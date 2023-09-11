@@ -1,0 +1,33 @@
+
+import time
+from adafruit_circuitplayground import cp
+
+# 100% brightness is too much for me to look at.  This is an over-all setting.
+cp.pixels.brightness = 0.05  # 5%
+# set each color to 50/128 intensity
+while True:
+
+    for pn in range(0, 10, 1):
+        cp.pixels[pn] = (0, 0, 64)
+        time.sleep(0.4)
+        cp.pixels[pn] = (0, 0, 0)
+    for pn in range(0, 10, 1):
+        cp.pixels[pn] = (0, 64, 0)
+        time.sleep(0.4)
+        cp.pixels[pn] = (0, 0, 0)
+    for pn in range(0, 10, 1):
+        cp.pixels[pn] = (64, 0, 0)
+        time.sleep(0.4)
+        cp.pixels[pn] = (0, 0, 0)
+    for pn in range(0, 10, 1):
+        cp.pixels[pn] = (30, 30, 0)
+        time.sleep(0.4)
+        cp.pixels[pn] = (0, 0, 0)
+    for pn in range(0, 10, 1):
+        cp.pixels[pn] = (30, 0, 30)
+        time.sleep(0.4)
+        cp.pixels[pn] = (0, 0, 0)
+    for pn in range(0, 10, 1):
+        cp.pixels[pn] = (0, 30, 30)
+        time.sleep(0.4)
+        cp.pixels[pn] = (0, 0, 0)
